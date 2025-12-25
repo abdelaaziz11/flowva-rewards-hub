@@ -53,7 +53,7 @@ const RewardsHub = () => {
     console.log("🔔 Notifications count:", notifications.length);
     console.log("🔔 User ID:", user?.id);
 
-    if (!loading && !user) {
+    if (!user) {
     setShowLogin(true);
   } else {
     setShowLogin(false);
