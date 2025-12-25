@@ -10,7 +10,7 @@ import { usePoints } from "../../hooks/usePoints";
 import { useRewards } from "../../hooks/useRewards";
 import { useNotifications } from "../../hooks/useNotifications";
 import { TABS } from "../../utils/constants";
-import TestLogin from '../../components/Auth/TestLogin';
+//import TestLogin from '../../components/Auth/TestLogin';
 
 const RewardsHub = () => {
   const { user, loading: authLoading } = useAuthContext();
@@ -20,7 +20,7 @@ const RewardsHub = () => {
   const [showNotifications, setShowNotifications] = useState(false);
   const [claimLoading, setClaimLoading] = useState(false);
   const [redeemLoading, setRedeemLoading] = useState(false);
-  const [showLogin, setShowLogin] = useState(false);
+  //const [showLogin, setShowLogin] = useState(false);
 
   // Custom hooks for data
   const {
@@ -53,11 +53,11 @@ const RewardsHub = () => {
     console.log("🔔 Notifications count:", notifications.length);
     console.log("🔔 User ID:", user?.id);
 
-    if (!user) {
-    setShowLogin(true);
-  } else {
-    setShowLogin(false);
-  }
+  //   if (!user) {
+  //   setShowLogin(true);
+  // } else {
+  //   setShowLogin(false);
+  // }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [notifications, user]);
 
@@ -113,9 +113,9 @@ const RewardsHub = () => {
       </div>
     );
   }
-  if (showLogin) {
-  return <TestLogin onLoginSuccess={() => window.location.reload()} />;
-}
+//   if (showLogin) {
+//   return <TestLogin onLoginSuccess={() => window.location.reload()} />;
+// }
 
   return (
     <div className="flex bg-gray-50 min-h-screen">

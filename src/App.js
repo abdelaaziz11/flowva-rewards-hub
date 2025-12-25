@@ -3,10 +3,12 @@ import { AuthProvider } from './context/AuthContext';
 import { RewardsProvider } from './context/RewardsContext';
 import RewardsHub from './pages/RewardsHub';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
 import { useAuthContext } from './context/AuthContext';
 
 function AppContent() {
   const { user, loading } = useAuthContext();
+  const path = window.location.pathname;
 
   if (loading) {
     return (
@@ -17,6 +19,11 @@ function AppContent() {
         </div>
       </div>
     );
+  }
+
+  // Show signup page
+  if (path === '/signup') {
+    return user ? <RewardsProvider><RewardsHub /></RewardsProvider> : <Signup />;
   }
 
   // Show login if no user
