@@ -367,12 +367,12 @@ This project is created as an assessment task. All rights reserved.
 ## 📧 Contact
 
 For questions or feedback, please contact:
-- Email: khoudaabdelaaziz@gmail.com
-- GitHub: [@yourusername](https://github.com/yourusername)
+- Email: abdelkhouda055@gmail.com
+- GitHub: [@abdelaaziz11](https://github.com/abdelaaziz11)
 
 ---
 
-**Live Demo**: [Your deployed URL here]
-**GitHub Repository**: [Your repo URL here]
+**Live Demo**:  https://flowva-rewards-hub.netlify.app
+**GitHub Repository**: https://github.com/abdelaaziz11/flowva-rewards-hub
 
 Made with ❤️ for the Flowva assessment
