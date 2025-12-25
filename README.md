@@ -23,7 +23,7 @@ A complete recreation of the Flowva Rewards platform with React, Supabase, and T
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/flowva-rewards-hub.git
+git clone https://github.com/abdelaaziz11/flowva-rewards-hub.git
 cd flowva-rewards-hub
 
 # Install dependencies
@@ -59,7 +59,7 @@ cp .env.example .env.local
 
 # Edit .env.local and add your Supabase credentials
 REACT_APP_SUPABASE_URL=https://xxxxx.supabase.co
-REACT_APP_SUPABASE_ANON_KEY=your-anon-key-here
+REACT_APP_SUPABASE_ANON_KEY=anon-key-here
 REACT_APP_BASE_URL=http://localhost:3000
 ```
 
