@@ -84,19 +84,11 @@ const Login = () => {
           >
             {loading ? "Signing in..." : "Sign In"}
           </button>
-          <p className="text-center text-sm text-gray-600 mt-4">
-            Don't have an account?{" "}
-            <a
-              href="/signup"
-              className="text-purple-600 hover:text-purple-700 font-medium"
-            >
-              Sign up
-            </a>
-          </p>
+          
         </form>
 
         <p className="text-center text-sm text-gray-600">
-          Use: <strong>abdelkhouda055@gmail.com</strong>
+          Use: <strong>demo@flowva.com / Demo123456!</strong>
         </p>
       </div>
     </div>
