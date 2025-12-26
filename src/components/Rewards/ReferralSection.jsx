@@ -29,7 +29,7 @@ const ReferralSection = ({ userId, referralStats }) => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-300">
+    <div className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
       <h2 className="text-xl font-bold text-gray-900 mb-6 border-l-4 border-purple-600 pl-4">
         Refer & Earn
       </h2>

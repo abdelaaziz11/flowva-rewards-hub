@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { authService } from "../services/auth.service";
-//import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  //const navigate = useNavigate();
+
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -16,7 +15,7 @@ const Login = () => {
 
     try {
       await authService.signIn(email, password);
-      window.location.href = "/"; // Redirect to home
+      window.location.href = "/";
     } catch (err) {
       setError(err.message);
     } finally {

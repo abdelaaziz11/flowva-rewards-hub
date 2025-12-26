@@ -1,5 +1,5 @@
 /**
- * Flowva Rewards Hub - Validation Utilities
+ * Validation Utilities
  * Complete validation functions for user inputs
  */
 

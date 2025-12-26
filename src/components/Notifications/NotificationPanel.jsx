@@ -10,7 +10,7 @@ const NotificationPanel = ({
   onClose 
 }) => {
   return (
-    <div className="absolute right-8 top-20 w-[580px] bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden z-50">
+    <div className="absolute right-8 top-16 w-[500px] bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden z-50">
       {/* Purple Header - Matches Flowva exactly */}
       <div className="bg-gradient-to-r from-purple-600 to-purple-500 px-6 py-5">
         <div className="flex items-center justify-between">

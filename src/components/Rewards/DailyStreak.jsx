@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Calendar } from 'lucide-react';
-//import { getDayInitial } from '../../utils/helpers';
+
 
 const DailyStreak = ({ streak, onClaim, loading = false }) => {
   const [claimed, setClaimed] = useState(false);
@@ -19,7 +19,7 @@ const DailyStreak = ({ streak, onClaim, loading = false }) => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl border border-blue-100 hover:shadow-lg transition-all duration-300 hover:border-blue-200">
+    <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl border border-blue-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 hover:border-blue-200">
       <div className="flex items-center gap-3 mb-4">
         <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
           <Calendar className="text-blue-600" size={20} />

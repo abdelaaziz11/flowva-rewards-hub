@@ -3,7 +3,7 @@ import { Users, Gift } from 'lucide-react';
 
 const FeaturedTool = ({ tool, onSignUp, onClaimPoints }) => {
   return (
-    <div className="bg-gradient-to-br from-cyan-50 via-blue-50 to-purple-50 p-6 rounded-xl border border-purple-200 relative overflow-hidden hover:shadow-lg transition-all duration-300 hover:border-purple-300">
+    <div className="bg-gradient-to-br from-cyan-50 via-blue-50 to-purple-50 p-6 rounded-xl border border-purple-200 relative overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 hover:border-purple-300">
       <div className="absolute top-4 right-4">
         <span className="text-2xl">✨</span>
       </div>

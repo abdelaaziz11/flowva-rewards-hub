@@ -10,7 +10,6 @@ import { usePoints } from "../../hooks/usePoints";
 import { useRewards } from "../../hooks/useRewards";
 import { useNotifications } from "../../hooks/useNotifications";
 import { TABS } from "../../utils/constants";
-//import TestLogin from '../../components/Auth/TestLogin';
 
 const RewardsHub = () => {
   const { user, loading: authLoading } = useAuthContext();
@@ -20,7 +19,6 @@ const RewardsHub = () => {
   const [showNotifications, setShowNotifications] = useState(false);
   const [claimLoading, setClaimLoading] = useState(false);
   const [redeemLoading, setRedeemLoading] = useState(false);
-  //const [showLogin, setShowLogin] = useState(false);
 
   // Custom hooks for data
   const {
@@ -41,7 +39,6 @@ const RewardsHub = () => {
 
   const {
     notifications,
-    //loading: notifLoading,
     markAsRead,
     markAllAsRead,
     deleteNotification,
@@ -52,13 +49,6 @@ const RewardsHub = () => {
     console.log("🔔 Notifications data:", notifications);
     console.log("🔔 Notifications count:", notifications.length);
     console.log("🔔 User ID:", user?.id);
-
-  //   if (!user) {
-  //   setShowLogin(true);
-  // } else {
-  //   setShowLogin(false);
-  // }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [notifications, user]);
 
   const hasUnreadNotifications = notifications.some((n) => !n.read);
@@ -104,7 +94,6 @@ const RewardsHub = () => {
     }
   };
 
-  //const hasUnreadNotifications = notifications.some((n) => !n.read);
 
   if (loading) {
     return (
@@ -113,9 +102,6 @@ const RewardsHub = () => {
       </div>
     );
   }
-//   if (showLogin) {
-//   return <TestLogin onLoginSuccess={() => window.location.reload()} />;
-// }
 
   return (
     <div className="flex bg-gray-50 min-h-screen">
@@ -147,31 +133,38 @@ const RewardsHub = () => {
 
         <main className="p-8">
           {/* Tab Navigation */}
-          <div className="flex gap-8 mb-8 border-b border-gray-200">
+          <div className="flex items-center gap-10 mb-8 border-b border-gray-200">
             <button
               onClick={() => setActiveTab(TABS.EARN)}
-              className={`pb-3 px-1 font-medium transition-colors relative ${
-                activeTab === TABS.EARN
-                  ? "text-purple-600"
-                  : "text-gray-500 hover:text-gray-700"
-              }`}
+              className={`relative overflow-visible px-6 py-3 font-semibold transition-colors
+                hover:bg-purple-50 hover:text-purple-600
+                ${
+                  activeTab === TABS.EARN
+                    ? "text-purple-600 bg-purple-50 rounded-t-lg"
+                    : "text-gray-500"
+                }
+              `}
             >
               Earn Points
               {activeTab === TABS.EARN && (
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-purple-600"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-purple-600 rounded-full pointer-events-none" />
               )}
             </button>
+
             <button
               onClick={() => setActiveTab(TABS.REDEEM)}
-              className={`pb-3 px-1 font-medium transition-colors relative ${
-                activeTab === TABS.REDEEM
-                  ? "text-purple-600"
-                  : "text-gray-500 hover:text-gray-700"
-              }`}
+              className={`relative overflow-visible px-6 py-3 font-semibold transition-colors
+                hover:bg-purple-50 hover:text-purple-600
+                ${
+                  activeTab === TABS.REDEEM
+                    ? "text-purple-600 bg-purple-50 rounded-t-lg"
+                    : "text-gray-500"
+                }
+              `}
             >
               Redeem Rewards
               {activeTab === TABS.REDEEM && (
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-purple-600"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-purple-600 rounded-full pointer-events-none" />
               )}
             </button>
           </div>

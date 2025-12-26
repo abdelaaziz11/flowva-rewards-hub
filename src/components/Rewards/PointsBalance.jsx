@@ -6,7 +6,7 @@ const PointsBalance = ({ points, targetPoints = 5000 }) => {
   const progress = calculateProgress(points, targetPoints);
 
   return (
-    <div className="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100 hover:shadow-lg transition-all duration-300 hover:border-purple-200">
+    <div className="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 hover:border-purple-200">
       <div className="flex items-center gap-3 mb-4">
         <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
           <Award className="text-purple-600" size={20} />
