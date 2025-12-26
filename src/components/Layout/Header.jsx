@@ -3,7 +3,7 @@ import { Bell } from 'lucide-react';
 
 const Header = ({ title, subtitle, onNotificationClick, hasUnread, unreadCount = 0 }) => {
   return (
-    <header className="bg-white border-b border-gray-200 px-8 py-4 flex items-center justify-between sticky top-0 z-10">
+    <header className="border-gray-200 px-8 py-4 flex items-center justify-between sticky top-5 z-10">
       <div>
         <h1 className="text-2xl font-bold text-gray-900">{title}</h1>
         {subtitle && (
